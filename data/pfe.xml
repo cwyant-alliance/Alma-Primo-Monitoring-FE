@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="4" time="44798">
+ <testsuite name="a primo search" timestamp="2018-03-16T15:46:53" hostname="localhost" time="31.891" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="a primo search" name="should have correct scopes" time="9.164" />
+  <testcase classname="a primo search" name="should return at least 500,000 results for &quot;dogs&quot; in the largest scope" time="12.185" />
+  <testcase classname="a primo search" name="should return less than 2,000 results for &quot;dogs&quot; in the LC scope" time="10.54" />
+ </testsuite>
+ <testsuite name="a primo advanced search" timestamp="2018-03-16T15:47:25" hostname="localhost" time="12.907" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="a primo advanced search" name="should return less than 8,000 results for horse ebooks" time="12.906" />
+ </testsuite>
+</testsuites>
