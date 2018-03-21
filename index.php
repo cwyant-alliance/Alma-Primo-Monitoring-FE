@@ -25,6 +25,7 @@ function pdate($date) {
 
 // read from protractor Primo XML file
 $xml = simplexml_load_file("data/pbo.xml") or die("Error: Cannot create object");
+$log = simplexml_load_file("data/log.xml") or die("Error: Cannot create object");
 
       // check for any failures
       $failures = 0;
@@ -62,9 +63,20 @@ $xml = simplexml_load_file("data/pbo.xml") or die("Error: Cannot create object")
 
           <?php
           foreach ($xml->testsuite as $suite) {
-                echo '<tr class="bg-light"><td><strong>' . $suite['name'] . ' - last updated: ' . pdate($suite['timestamp']) . '</strong></td><td></td></tr>'; ?>
+                echo '<tr class="bg-light"><td><strong>' . $suite['name'] . ' - last updated: ' . pdate($suite['timestamp']) . '</strong></td><td></td></tr>';
 
-              <?php
+                if ($suite['name'] == 'check CP_Alma last run') {
+                  echo '<tr><td>Start time: ' . pdate($log->cp_alma->start) . '<br/>End time: ' . pdate($log->cp_alma->end) . '<td></td></td></tr>';
+                }
+
+                if ($suite['name'] == 'check Dedup_Frbr last run') {
+                  echo '<tr><td>Start time: ' . pdate($log->dedup->start) . '<br/>End time: ' . pdate($log->dedup->end) . '<td></td></td></tr>';
+                }
+
+                if ($suite['name'] == 'check Indexing_and_Hotswapping last run') {
+                  echo '<tr><td>Start time: ' . pdate($log->indexing->start) . '<br/>End time: ' . pdate($log->indexing->end) . '<td></td></td></tr>';
+                }
+
               foreach($suite->testcase as $case) {
                   if ($case->failure) {
                     $failures++;

@@ -1,58 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="3" tests="9" time="24030">
- <testsuite name="logging in to primo back office" timestamp="2018-03-16T15:45:26" hostname="localhost" time="4.9" errors="0" tests="0" skipped="0" disabled="0" failures="0">
- </testsuite>
- <testsuite name="logging in to primo back office.through PBO" timestamp="2018-03-16T15:45:26" hostname="localhost" time="4.9" errors="0" tests="1" skipped="0" disabled="0" failures="1">
-  <testcase classname="logging in to primo back office.through PBO" name="should work with a known good account" time="4.896">
+<testsuites disabled="0" errors="0" failures="1" tests="11" time="17314">
+ <testsuite name="logging in to primo back office" timestamp="2018-03-21T09:26:05" hostname="localhost" time="4.235" errors="0" tests="1" skipped="0" disabled="0" failures="1">
+  <testcase classname="logging in to primo back office" name="should work with a known good account" time="4.232">
    <failure type="toBeTruthy" message="Expected false to be truthy."><![CDATA[Error: Failed expectation
-    at UserContext.<anonymous> (/home/ubuntu/pbo-testing/specs/pbo.js:21:39)
-    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25
-    at new ManagedPromise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:1077:7)
-    at ControlFlow.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2505:12)
-    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)
-    at TaskQueue.execute_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at asyncRun (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2974:25)
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:668:7]]>
+    at UserContext.<anonymous> (C:\protractor\pbo-testing\specs\pbo.js:20:42)
+    at C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)
+    at C:\Users\cwyant\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
    </failure>
   </testcase>
  </testsuite>
- <testsuite name="check CP_Alma last run" timestamp="2018-03-16T15:45:31" hostname="localhost" time="4.503" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="check CP_Alma last run" name="stage should be completed successfully" time="2.542" />
-  <testcase classname="check CP_Alma last run" name="status should be completed" time="1.961" />
+ <testsuite name="check CP_Alma last run" timestamp="2018-03-21T09:26:09" hostname="localhost" time="3.363" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="check CP_Alma last run" name="stage should be completed successfully" time="1.952" />
+  <testcase classname="check CP_Alma last run" name="status should be completed" time="1.408" />
  </testsuite>
- <testsuite name="check Indexing_and_Hotswapping last run" timestamp="2018-03-16T15:45:36" hostname="localhost" time="3.917" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="check Indexing_and_Hotswapping last run" name="stage should be completed successfully" time="1.869" />
-  <testcase classname="check Indexing_and_Hotswapping last run" name="status should be completed" time="2.048" />
+ <testsuite name="check Dedup_Frbr last run" timestamp="2018-03-21T09:26:12" hostname="localhost" time="2.795" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="check Dedup_Frbr last run" name="stage should be completed successfully" time="1.423" />
+  <testcase classname="check Dedup_Frbr last run" name="status should be completed" time="1.37" />
  </testsuite>
- <testsuite name="check slice status" timestamp="2018-03-16T15:45:40" hostname="localhost" time="5.81" errors="0" tests="4" skipped="0" disabled="0" failures="2">
-  <testcase classname="check slice status" name="should show three slices" time="1.308" />
-  <testcase classname="check slice status" name="should show slice 1 up" time="1.248">
-   <failure type="toBe" message="Expected &apos;3&apos; to be &apos;1&apos;."><![CDATA[Error: Failed expectation
-    at UserContext.<anonymous> (/home/ubuntu/pbo-testing/specs/pbo.js:79:57)
-    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25
-    at new ManagedPromise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:1077:7)
-    at ControlFlow.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2505:12)
-    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)
-    at TaskQueue.execute_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at asyncRun (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2974:25)
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:668:7]]>
-   </failure>
-  </testcase>
-  <testcase classname="check slice status" name="should show slice 2 up" time="1.613" />
-  <testcase classname="check slice status" name="should show slice 3 up" time="1.639">
-   <failure type="toBe" message="Expected &apos;1&apos; to be &apos;3&apos;."><![CDATA[Error: Failed expectation
-    at UserContext.<anonymous> (/home/ubuntu/pbo-testing/specs/pbo.js:91:57)
-    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25
-    at new ManagedPromise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:1077:7)
-    at ControlFlow.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2505:12)
-    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)
-    at TaskQueue.execute_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at asyncRun (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2974:25)
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:668:7]]>
-   </failure>
-  </testcase>
+ <testsuite name="check Indexing_and_Hotswapping last run" timestamp="2018-03-21T09:26:15" hostname="localhost" time="2.666" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="check Indexing_and_Hotswapping last run" name="stage should be completed successfully" time="1.336" />
+  <testcase classname="check Indexing_and_Hotswapping last run" name="status should be completed" time="1.329" />
+ </testsuite>
+ <testsuite name="check slice status" timestamp="2018-03-21T09:26:18" hostname="localhost" time="4.255" errors="0" tests="4" skipped="0" disabled="0" failures="0">
+  <testcase classname="check slice status" name="should show three slices" time="1.13" />
+  <testcase classname="check slice status" name="should show first slice up" time="1.051" />
+  <testcase classname="check slice status" name="should show second slice up" time="1.006" />
+  <testcase classname="check slice status" name="should show third slice up" time="1.064" />
  </testsuite>
 </testsuites>
