@@ -16,12 +16,18 @@
   </div>
 <?php
 
-// date formatting
+// format UTC dates
 function pdate($date) {
     $date = new DateTime($date);
     $date->setTimezone(new DateTimeZone('America/Los_Angeles'));
-    return $date->format('m/d/y h:ia');
+    return $date->format('m/d/y - h:ia');
   };
+
+// format PST dates
+  function cdate($date) {
+      $date = new DateTime($date);
+      return $date->format('m/d/y - h:ia');
+    };
 
 // read from protractor Primo XML file
 $xml = simplexml_load_file("data/pbo.xml") or die("Error: Cannot create object");
@@ -66,15 +72,15 @@ $log = simplexml_load_file("data/log.xml") or die("Error: Cannot create object")
                 echo '<tr class="bg-light"><td><strong>' . $suite['name'] . ' - last updated: ' . pdate($suite['timestamp']) . '</strong></td><td></td></tr>';
 
                 if ($suite['name'] == 'check CP_Alma last run') {
-                  echo '<tr><td>Start time: ' . pdate($log->cp_alma->start) . '<br/>End time: ' . pdate($log->cp_alma->end) . '<td></td></td></tr>';
+                  echo '<tr><td>Start time: ' . cdate($log->cp_alma->start) . '<br/>End time: ' . cdate($log->cp_alma->end) . '<td></td></td></tr>';
                 }
 
                 if ($suite['name'] == 'check Dedup_Frbr last run') {
-                  echo '<tr><td>Start time: ' . pdate($log->dedup->start) . '<br/>End time: ' . pdate($log->dedup->end) . '<td></td></td></tr>';
+                  echo '<tr><td>Start time: ' . cdate($log->dedup->start) . '<br/>End time: ' . cdate($log->dedup->end) . '<td></td></td></tr>';
                 }
 
                 if ($suite['name'] == 'check Indexing_and_Hotswapping last run') {
-                  echo '<tr><td>Start time: ' . pdate($log->indexing->start) . '<br/>End time: ' . pdate($log->indexing->end) . '<td></td></td></tr>';
+                  echo '<tr><td>Start time: ' . cdate($log->indexing->start) . '<br/>End time: ' . cdate($log->indexing->end) . '<td></td></td></tr>';
                 }
 
               foreach($suite->testcase as $case) {
